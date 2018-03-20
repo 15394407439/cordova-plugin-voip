@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 顶部带圆角 白色背景 灰色边框 无下边框 长方体 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape>
+            <solid android:color="#c9c9c9"/>
+
+            <corners
+                android:radius="10dp"/>
+
+            <size
+                android:width="289dp"
+                android:height="56dp"/><!-- 宽度和高度 -->
+        </shape>
+    </item>
+
+</layer-list>

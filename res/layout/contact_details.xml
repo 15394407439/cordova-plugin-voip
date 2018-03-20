@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <!--Title-->
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/icon_fanhui"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/mk_contact_detail_title_tv"
+            android:layout_width="1dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:singleLine="true"
+            android:text="联系人详情"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+     <!--   <TextView
+            android:id="@+id/mk_contact_detail_title_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:textColor="@color/diancall"
+            android:text="编辑"
+            android:textSize="20sp"
+            android:visibility="visible" />-->
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/vs_contact_detail_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="60dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="26sp" />
+
+        <View
+            android:id="@+id/line_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0.67dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/line_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white">
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="电话号码"
+        android:layout_marginLeft="20dp"
+        android:textSize="22sp"
+        android:textColor="@color/input_hint"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:dividerHeight="0.67dp"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/tv_call_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@drawable/call_btn_phone"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/PersonalSelBg" />
+    </RelativeLayout>
+
+
+</LinearLayout>

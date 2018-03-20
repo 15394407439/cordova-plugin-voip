@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_call_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    <ImageView
+        android:id="@+id/iv_dianhua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_dianhua"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_name"
+                android:text="姓名"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_dianhua"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:text="电话号码"
+            android:textColor="@color/input_hint"
+            android:textSize="14sp"
+            />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_system_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"
+            android:text="12:00"
+            />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dial_new_line">
+    </View>
+</LinearLayout>

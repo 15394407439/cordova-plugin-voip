@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  回拨网络电话添加的颜色-->
+    <color name="call_phone">#FEA04A</color>
+    <color name="diancall">#FEA34E</color>
+    <color name="hujiao_green">#12ac02</color>
+	<color name="bg_color">#F4F3F3</color>
+	
+	  <!-- 
+	<color name="bg_color">#F4F3F3</color>
+	<color name="black">#000000</color>
+	<color name="line_color">#e6e6e6</color>
+	<color name="PersonalSelBg">#e4e4e4</color>
+	<color name="input_hint">#9f9f9f</color>-->
+	
+</resources>

@@ -1,0 +1,47 @@
+<resources>
+    <!-- 直拨 -->
+    <string name="key_broad">键盘</string>
+    <string name="callphone_hint_void">静音</string>
+    <string name="callphone_hint_hf">免提</string>
+    <string name="vs_callphone_chioce_hint">不再提醒</string>
+    <string name="callphone_callend">挂断</string>
+    <string name="vs_callphone_hint_str">隐藏</string>
+    <string name="callphone_promt1">需要绑定手机才能使用！</string>
+    <string name="callphone_monery_title">余额不足</string>
+    <string name="callphone_monery_msg">你的账户没有话费，建议充值后拨打</string>
+    <string name="incall_0">结束通话</string>
+    <string name="incall_1">通话结束</string>
+    <string name="incall_2">呼叫超时,通话结束</string>
+    <string name="incall_402">余额不足</string>
+    <string name="incall_403">被叫号码被禁呼</string>
+    <string name="incall_405">被叫号码不支持</string>
+    <string name="incall_407">鉴权失败</string>
+    <string name="incall_408">呼叫超时</string>
+    <string name="incall_480">被叫拒绝接听</string>
+    <string name="incall_486">对方忙正在通话中</string>
+    <string name="incall_502">频繁呼叫或账号无效</string>
+    <string name="incall_503">账号已过期</string>
+    <string name="incall_530">服务不可达(服务器异常或繁忙)</string>
+    <string name="incall_603">对方拒绝接听</string>
+    <string name="state_10001">用户不存在</string>
+    <string name="state_10002">账户被冻结</string>
+    <string name="state_10003">账户已过期</string>
+    <string name="state_10701">参数错误</string>
+    <string name="state_10702">品牌不存在</string>
+    <string name="state_10703">签名Key未配置</string>
+    <string name="state_10704">签名不正确</string>
+    <string name="state_10705">账号不存在</string>
+    <string name="state_10706">UCPAAS账号信息未配置</string>
+    <string name="state_10707">没有与appid对应的品牌Id</string>
+    <string name="state_10708">没有与云uid对应的uid</string>
+    <string name="state_10709">品牌总账号余额不足</string>
+    <string name="state_10710">用户无余额信息</string>
+    <string name="state_10711">账号被冻结</string>
+    <string name="state_10712">账号已过期</string>
+    <string name="state_10713">没有绑定手机号码</string>
+    <string name="state_10714">绑定手机号码未验证，超过了体验次数限制</string>
+    <string name="state_10715">没有设置费率</string>
+    <string name="state_10716">余额不足，请及时充值</string>
+    <string name="state_10717">读取用户信息发生异常</string>
+
+</resources>

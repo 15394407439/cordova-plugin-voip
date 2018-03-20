@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-x-voip" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>RYZVoip</name>
+	 <description>网络回拨电话的插件</description>
+    <js-module name="RYZVoip" src="www/RYZVoip.js">
+		<clobbers target="RYZVoip" />
+    </js-module>
+	<!-- android -->
+    <platform name="android">
+        <!--添加包名信息-->
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="RYZVoip">
+                <param name="android-package" value="com.ryz.RYZVoip"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+		
+        <!--添加权限-->
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+        </config-file>
+		
+        <!--添加基础配置-->
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <!--配置activity-->
+			 <activity android:name="com.activity.SoftCallActivity"/>
+             <activity android:name="com.activity.ContactsActivity"/>
+             <activity android:name="com.activity.ContactsDialActivty"/>
+             <activity android:name="com.activity.HuiboActivity"/>
+             <activity android:name="com.activity.CallTopUpActivity"/>
+        </config-file>
+		
+		<!--添加库文件 -->
+		<source-file src="src/android/gson-2.8.0.jar" target-dir="libs" />
+		<source-file src="src/android/okhttp-3.7.0.jar" target-dir="libs" />
+		<source-file src="src/android/okio-1.12.0.jar" target-dir="libs" />
+		
+        <!--添加资源文件（activity）到项目-->
+        <source-file src="src/android/activity/CallLogAdapter.java" target-dir="src/com/activity" />
+        <source-file src="src/android/activity/ContactsActivity.java" target-dir="src/com/activity" />
+        <source-file src="src/android/activity/ContactsDialActivty.java" target-dir="src/com/activity" />
+        <source-file src="src/android/activity/HuiboActivity.java" target-dir="src/com/activity" />
+        <source-file src="src/android/activity/SoftCallActivity.java" target-dir="src/com/activity" />
+        <source-file src="src/android/activity/StringUtils.java" target-dir="src/com/activity" />
+        <source-file src="src/android/activity/CallTopUpActivity.java" target-dir="src/com/activity" />
+		
+		<!--添加 bean 资源文件到项目 -->
+        <source-file src="src/android/bean/CallLongBean.java" target-dir="src/com/bean" />
+        <source-file src="src/android/bean/CallPhoneBean.java" target-dir="src/com/bean" />
+        <source-file src="src/android/bean/ItemBean.java" target-dir="src/com/bean" />
+		
+		<!--添加 contactsList 资源文件到项目 -->
+        <source-file src="src/android/contactsList/CLogUtils.java" target-dir="src/com/contactsList" />
+        <source-file src="src/android/contactsList/CharacterParser.java" target-dir="src/com/contactsList" />
+        <source-file src="src/android/contactsList/Contact.java" target-dir="src/com/contactsList" />
+        <source-file src="src/android/contactsList/ContactsSortAdapter.java" target-dir="src/com/contactsList" />
+        <source-file src="src/android/contactsList/GetContactsInfo.java" target-dir="src/com/contactsList" />
+        <source-file src="src/android/contactsList/PinyinComparator.java" target-dir="src/com/contactsList" />
+        <source-file src="src/android/contactsList/SideBar.java" target-dir="src/com/contactsList" />
+        <source-file src="src/android/contactsList/SortModel.java" target-dir="src/com/contactsList" />
+        <source-file src="src/android/contactsList/SortToken.java" target-dir="src/com/contactsList" />
+		
+		<!--添加 dao 资源文件到项目 -->
+        <source-file src="src/android/dao/CallPhoneDao.java" target-dir="src/com/dao" />
+        <source-file src="src/android/dao/CallPhoneHelper.java" target-dir="src/com/dao" />
+
+        <source-file src="src/android/ryz/RYZVoip.java" target-dir="src/com/ryz" />
+        <source-file src="src/android/utils/Constants.java" target-dir="src/com/utils" />
+       
+	   <!--添加图片资源-->
+	   <resource-file src="res/anim/menu_bottombar_in.xml" target="res/anim/menu_bottombar_in.xml" />
+	   <resource-file src="res/anim/menu_bottombar_out.xml" target="res/anim/menu_bottombar_out.xml" />
+	   <resource-file src="res/anim/vs_callphone_scale.xml" target="res/anim/vs_callphone_scale.xml" />
+	   
+	   <resource-file src="res/drawable/call_btn_bohao.xml" target="res/drawable/call_btn_bohao.xml" />
+	   <resource-file src="res/drawable/call_btn_bottom_shape_bg.xml" target="res/drawable/call_btn_bottom_shape_bg.xml" />
+	   <resource-file src="res/drawable/call_btn_phone.xml" target="res/drawable/call_btn_phone.xml" />
+	   <resource-file src="res/drawable/call_huibo_fanhui_shape.xml" target="res/drawable/call_huibo_fanhui_shape.xml" />
+	   <resource-file src="res/drawable/line_diviver.xml" target="res/drawable/line_diviver.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_00.xml" target="res/drawable/mk_dial_keyboard_num_00.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_01.xml" target="res/drawable/mk_dial_keyboard_num_01.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_02.xml" target="res/drawable/mk_dial_keyboard_num_02.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_03.xml" target="res/drawable/mk_dial_keyboard_num_03.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_04.xml" target="res/drawable/mk_dial_keyboard_num_04.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_05.xml" target="res/drawable/mk_dial_keyboard_num_05.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_06.xml" target="res/drawable/mk_dial_keyboard_num_06.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_07.xml" target="res/drawable/mk_dial_keyboard_num_07.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_08.xml" target="res/drawable/mk_dial_keyboard_num_08.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_09.xml" target="res/drawable/mk_dial_keyboard_num_09.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_del_selector.xml" target="res/drawable/mk_dial_keyboard_num_del_selector.xml" />
+	   <resource-file src="res/drawable/mk_dial_keyboard_num_paste_selector.xml" target="res/drawable/mk_dial_keyboard_num_paste_selector.xml" />
+	   <resource-file src="res/drawable/selector_checkbox_contact.xml" target="res/drawable/selector_checkbox_contact.xml" />
+	   <resource-file src="res/drawable/sidebar_background.xml" target="res/drawable/sidebar_background.xml" />
+	   <resource-file src="res/drawable/solid_divider_ccc.xml" target="res/drawable/solid_divider_ccc.xml" />
+	   <resource-file src="res/drawable/solid_divider_fff.xml" target="res/drawable/solid_divider_fff.xml" />
+	   <resource-file src="res/drawable/vs_btn_call_selecter.xml" target="res/drawable/vs_btn_call_selecter.xml" />
+	   <resource-file src="res/drawable/vs_keyboard_address_list_selecter.xml" target="res/drawable/vs_keyboard_address_list_selecter.xml" />
+	   <resource-file src="res/drawable/vs_keyboard_call_selecter.xml" target="res/drawable/vs_keyboard_call_selecter.xml" />
+	   <resource-file src="res/drawable/vs_shape_call_out_start.xml" target="res/drawable/vs_shape_call_out_start.xml" />
+	   <resource-file src="res/drawable/top_up_bottom_shape_bg.xml" target="res/drawable/top_up_bottom_shape_bg.xml" />
+	   
+	   <resource-file src="res/drawable-hdpi" target="res/drawable-hdpi" />
+	   
+	    <!--添加布局文件资源-->
+	   <resource-file src="res/layout/contact_details.xml" target="res/layout/contact_details.xml" />
+	   <resource-file src="res/layout/huibo_activity.xml" target="res/layout/huibo_activity.xml" />
+	   <resource-file src="res/layout/item_contact.xml" target="res/layout/item_contact.xml" />
+	   <resource-file src="res/layout/item_list_view.xml" target="res/layout/item_list_view.xml" />
+	   <resource-file src="res/layout/keyboard_layout.xml" target="res/layout/keyboard_layout.xml" />
+	   <resource-file src="res/layout/layout_contacts.xml" target="res/layout/layout_contacts.xml" />
+	   <resource-file src="res/layout/vs_callphone_layout.xml" target="res/layout/vs_callphone_layout.xml" />
+	   <resource-file src="res/layout/activity_call_top_up.xml" target="res/layout/activity_call_top_up.xml" />
+	   
+	   <resource-file src="res/values/styles.xml" target="res/values/styles.xml" />
+	   <resource-file src="res/values/call_phone_color.xml" target="res/values/call_phone_color.xml" />
+		
+    </platform>
+
+</plugin>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <!--   Non focused states
+    <item android:drawable="@drawable/vs_small_keyboard_jh" android:state_focused="false" android:state_pressed="false" android:state_selected="false"></item>
+    <item android:drawable="@drawable/vs_small_keyboard_jh" android:state_focused="false" android:state_pressed="false" android:state_selected="true"></item>
+
+    &lt;!&ndash; Focused states &ndash;&gt;
+    <item android:drawable="@drawable/vs_small_keyboard_jh" android:state_focused="true" android:state_pressed="true" android:state_selected="true"></item>
+    <item android:drawable="@drawable/vs_small_keyboard_jh" android:state_focused="true" android:state_pressed="true" android:state_selected="false"></item>
+
+    &lt;!&ndash; Pressed &ndash;&gt;
+    <item android:drawable="@drawable/vs_small_keyboard_select_jh" android:state_pressed="true"/>-->
+
+</selector>

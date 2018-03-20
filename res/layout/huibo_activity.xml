@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/call_huibo_backgroud">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textColor="@color/diancall"
+        android:text="电话回拨中，请稍后....."/>
+
+    <TextView
+        android:id="@+id/tv_call_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textSize="18dp"
+        android:textColor="@color/diancall"
+        android:text="15394407356"/>
+
+    <TextView
+        android:id="@+id/tv_huibo_fanhui"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/call_huibo_fanhui_shape"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        />
+
+</LinearLayout>
